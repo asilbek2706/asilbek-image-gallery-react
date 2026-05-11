@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import ImageCard from "./components/ImageCard";
+import {Mosaic} from "react-loading-indicators";
 
 function App() {
     const [images, setImages] = useState([])
@@ -18,9 +19,11 @@ function App() {
 
     return (
         <div className={'container mx-auto'}>
-            <div className={'grid grid-cols-3 gap-4'}>
-                {images.map()}
-            </div>
+            {isLoading ? <Mosaic color="#32cd32" size="medium" text="" textColor="" className={"mt-32 text-center mx-auto"} /> : <div className={'grid grid-cols-3 gap-4'}>
+                {images.map(image => (
+                    <ImageCard key={image.id} image={image}/>
+                ))}
+            </div>}
         </div>
     );
 }
