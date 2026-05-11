@@ -1,53 +1,123 @@
-# Getting Started with Create React App
+# 📸 Image Gallery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive image gallery web application built with React and Tailwind CSS. Search and browse high-quality images from Pixabay with a beautiful, animated user interface.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- 🔍 **Image Search** - Search for images using keywords powered by Pixabay API
+- 📱 **Responsive Design** - Fully responsive grid layout that works on all devices
+- ⚡ **Fast Loading** - Optimized image loading with lazy loading indicators
+- 🎨 **Modern UI** - Beautiful glassmorphism design with smooth animations
+- 📊 **Image Details** - View image statistics including views, likes, and downloads
+- 🏷️ **Image Tags** - Browse related tags for each image
+- 👤 **Creator Info** - See the photographer's name and profile
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn package manager
+- Pixabay API key (get one at [https://pixabay.com/api/](https://pixabay.com/api/))
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd image-gallery
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env.local` file in the root directory and add your Pixabay API key:
+```
+REACT_APP_PIXABAY_API_KEY=your_api_key_here
+```
+
+4. Start the development server:
+```bash
+npm start
+```
+
+The app will open at [http://localhost:3000](http://localhost:3000)
+
+## 📦 Available Scripts
 
 ### `npm start`
+Runs the app in development mode with hot reloading.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `npm build`
+Builds the app for production to the `build` folder. The build is optimized and minified.
 
 ### `npm test`
+Launches the test runner in watch mode.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Project Structure
 
-### `npm run build`
+```
+src/
+├── App.js                 # Main app component with image fetching logic
+├── index.js              # React entry point
+├── index.css             # Global styles
+└── components/
+    ├── ImageSearch.js    # Search input component
+    └── ImageCard.js      # Individual image card component
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React 19** - UI library
+- **Tailwind CSS** - Utility-first CSS framework
+- **PostCSS** - CSS transformation tool
+- **Pixabay API** - Image data source
+- **react-loading-indicators** - Loading animations
+- **Create React App** - Development environment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎯 How It Works
 
-### `npm run eject`
+1. **Search** - Enter keywords in the search box
+2. **Fetch** - The app queries Pixabay API with your search term
+3. **Display** - Images load and display in a responsive grid
+4. **Interact** - Hover over images to see photographer info and download details
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🌐 API Integration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This app uses the **Pixabay API** to fetch free-to-use images. Each API call returns:
+- Image URL in multiple formats
+- Creator information
+- View, like, and download counts
+- Associated tags
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📱 Responsive Breakpoints
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Mobile** - 1 column
+- **Tablet** - 2 columns
+- **Desktop** - 3 columns
+- **Wide Screen** - 4 columns
 
-## Learn More
+## 🎨 Styling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app uses Tailwind CSS with custom configurations for:
+- Glassmorphism effects
+- Smooth transitions and animations
+- Gradient overlays
+- Responsive spacing and sizing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📄 License
 
-### Code Splitting
+This project is open source and available under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit pull requests or open issues.
+
+## 📧 Support
+
+For issues or questions, please create an issue in the repository.
 
 ### Analyzing the Bundle Size
 
